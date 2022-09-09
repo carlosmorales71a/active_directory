@@ -11,6 +11,14 @@
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 ```
 
+# Configure Active Directory Windows Server 2022 Core
+
+```shell
+import-Module ADDSDeployment
+
+install-ADDSForest
+```
+
 3. Find the index of the interface hosting the current IP address and set the interface’s DNS server
 ```shell
 Get-NetIPAddress -IPAddress xxx.xxx.xxx.xxx
@@ -24,17 +32,10 @@ Get-DNSClientServerAddress
 Set-DNSClientServerAddress -InterfaceIndex 5 -ServerAddresses xxx.xxx.xxx.xxx
 ```
 
-
 # Joining the Workstation to the domain
 
 ```shell
 Add-Computer -Domainname xyz.com -Credential xyz\Administrator -Force -Restart
 ```
 
-# Configure Active Directory Windows Server 2022 Core
 
-```shell
-import-Module ADDSDeployment
-
-install-ADDSForest
-```
