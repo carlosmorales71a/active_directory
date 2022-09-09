@@ -20,3 +20,11 @@ Get-NetIPAddress
 ```shell
 Add-Computer -Domainname xyz.com -Credential xyz\Administrator -Force -Restart
 ```
+
+# Configure Active Directory Windows Server 2022 Core
+
+```shell
+import-Module ADDSDeployment
+
+install-ADDSForest
+```
