@@ -11,9 +11,19 @@
 Install-WindowsFeature AD-Domain-Services -IncludeManagementTools
 ```
 
+3. Find the index of the interface hosting the current IP address and set the interface’s DNS server
 ```shell
-Get-NetIPAddress
+Get-NetIPAddress -IPAddress xxx.xxx.xxx.xxx
 ```
+
+```shell
+Get-DNSClientServerAddress
+```
+
+```shell
+Set-DNSClientServerAddress -InterfaceIndex 5 -ServerAddresses xxx.xxx.xxx.xxx
+```
+
 
 # Joining the Workstation to the domain
 
