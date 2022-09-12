@@ -30,3 +30,8 @@
 ```shell
 Get-Content .\ad_schema.json |ConvertFrom-Json
 ```
+
+# Create Variable to access comain controller
+```shell
+ $dc =New-PSSession -ComputerName xxx.xxx.xxx.xxx -Credential (Get-Credential)
+```
