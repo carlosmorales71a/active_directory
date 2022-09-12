@@ -35,3 +35,10 @@ Get-Content .\ad_schema.json |ConvertFrom-Json
 ```shell
  $dc =New-PSSession -ComputerName xxx.xxx.xxx.xxx -Credential (Get-Credential)
 ```
+
+# Copy ad_schema.json to domain controller
+
+```shell
+Copy-Item .\ad_schema.json -ToSession $dc C:\Windows\Tasks
+Enter-PSSession $dc
+```
