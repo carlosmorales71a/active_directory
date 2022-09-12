@@ -24,3 +24,9 @@
     ]
 }
 ```
+
+# Convert from json code
+
+```shell
+Get-Content .\ad_schema.json |ConvertFrom-Json
+```
