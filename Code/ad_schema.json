@@ -1,7 +1,9 @@
 {
+    "domain": "xyz.com",
+
     "groups" : [
         {
-            "name": "Cyber Security"
+            "name": "Employees"
         }
     ],
 
